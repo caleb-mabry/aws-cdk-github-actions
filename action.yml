@@ -29,6 +29,8 @@ inputs:
 outputs:
   status_code:
     description: 'Returned status code.'
+  diff_output:
+    description: 'Returned diff output.'
 runs:
   using: 'docker'
   image: './Dockerfile'

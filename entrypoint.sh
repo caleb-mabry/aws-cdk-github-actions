@@ -68,6 +68,8 @@ function runCdk(){
 	set +o pipefail
 	echo "status_code=${exitCode}" >> $GITHUB_OUTPUT
 	output=$(cat output.log)
+	echo "diff_output=${output}" >> $GITHUB_OUTPUT
+
 
 	commentStatus="Failed"
 	if [ "${exitCode}" == "0" ]; then
